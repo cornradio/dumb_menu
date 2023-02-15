@@ -15,3 +15,7 @@ print(f"You selected option {index + 1}: {options[index]}")
 
 https://pypi.org/project/dumb-menu/
 
+## how to upload a new version
+1. change `setup.py`
+2. `python3 setup.py sdist`
+3. `twine upload dist/*`
