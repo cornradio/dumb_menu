@@ -1,2 +1,4 @@
 dist/
 dumb_menu.egg-info/
+.idea/
+build/
