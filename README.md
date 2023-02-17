@@ -1,4 +1,7 @@
 # dumb_menu
+
+[![Downloads](https://static.pepy.tech/badge/dumb-menu)](https://pepy.tech/project/dumb-menu)
+
 simple_term_menu don't support windows, so i made this.
 
 this is not as powerful as simple_term_menu , but this is **THE GOOD OLD MEUN** .
