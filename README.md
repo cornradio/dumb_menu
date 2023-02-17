@@ -1,7 +1,9 @@
 # dumb_menu
-one day i want to make a menu for my progarm, but i don't want to use any library they are so heavy and not support both mac and windows (i am talking about u : simple_term_menu ), so i make this.
+simple_term_menu don't support windows, so i made this.
 
-dumb_menu is a ligh weight menu ,support hot key, support both win and mac ,not tested on linux.
+this is not as powerful as simple_term_menu , but this is **THE GOOD OLD MEUN** .
+
+dumb_menu is a **ligh weight** menu ,support **hot key**, for both **win** and **mac** .
 
 ## Usage
 
@@ -17,6 +19,9 @@ print(f"You selected option {index + 1}: {options[index]}")
 ## Installation
 
 https://pypi.org/project/dumb-menu/
+
+https://github.com/cornradio/dumb_menu (i want stars ⭐ uwu)
+
 
 ## how to upload a new version (for me)
 

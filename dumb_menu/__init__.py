@@ -73,6 +73,7 @@ def get_menu_choice(options):
         elif key in ('up','down'):  # Up or Down arrow
             selected_index = (selected_index + (1 if key == 'down' else -1) + len(options)) % len(options)
         elif key in shortcuts:  # Shortcut key
+            show_menu(options, shortcuts[key]) #show selected option when using shortcut
             return shortcuts[key]
 
 def scan_short_cuts(options):
@@ -93,7 +94,7 @@ def show_menu(options, selected_index):
             print(f"> {option}")
         else:
             print(f"  {option}")
-    print("\nUse the arrow keys to move, Enter/key to select.")
+    print("\nUse the arrow keys to move, Enter/Hotkey to select.")
 
 
 
