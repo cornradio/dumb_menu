@@ -61,19 +61,19 @@ def get_key(): #get keypress using getch , msvcrt = windows or termios = linux
         pass
 
 
-def get_menu_choice(options):
+def get_menu_choice(options,isclean = False):
     shortcuts = scan_short_cuts(options)  # scan for shortcuts
     selected_index = 0
     print(shortcuts)
     while True:
-        show_menu(options, selected_index)
+        show_menu(options, selected_index , isclean)
         key = get_key()
         if key == 'enter':  # Enter key to select
             return selected_index
         elif key in ('up','down'):  # Up or Down arrow
             selected_index = (selected_index + (1 if key == 'down' else -1) + len(options)) % len(options)
         elif key in shortcuts:  # Shortcut key
-            show_menu(options, shortcuts[key]) #show selected option when using shortcut
+            show_menu(options, shortcuts[key],isclean) #show selected option when using shortcut
             return shortcuts[key]
 
 def scan_short_cuts(options):
@@ -85,8 +85,14 @@ def scan_short_cuts(options):
             shortcuts[shortcut] = i
     return shortcuts
 
+def show_menu(options, selected_index,isclean):
+    if isclean:
+        show_clean_menu(options, selected_index)
+    else:
+        show_normal_menu(options, selected_index)
 
-def show_menu(options, selected_index):
+
+def show_normal_menu(options, selected_index):
     os.system("cls" if os.name == "nt" else "clear")
     print("Menu","current option:",selected_index)
     for i, option in enumerate(options):
@@ -96,13 +102,21 @@ def show_menu(options, selected_index):
             print(f"  {option}")
     print("\nUse the arrow keys to move, Enter/Hotkey to select.")
 
-
+def show_clean_menu(options, selected_index):
+    os.system("cls" if os.name == "nt" else "clear")
+    for i, option in enumerate(options):
+        if i == selected_index:
+            print(f"> {option}")
+        else:
+            print(f"  {option}")
 
 def demo():
     options = ["[1]Option 1", "[2]Option 2", "[3]Option 3","[q]quit"]
-    index = get_menu_choice(options)
+    index = get_menu_choice(options,isclean=True)
 
     if index != -1:
         print(f"You selected option {index + 1}: {options[index]}")
     else:
         print("You exited the menu.")
+
+demo()
