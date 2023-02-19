@@ -8,6 +8,13 @@ this is not as powerful as simple_term_menu , but this is **THE GOOD OLD MEUN** 
 
 dumb_menu is a **ligh weight** menu ,support **hot key**, for both **win** and **mac** .
 
+
+## Installation
+
+https://pypi.org/project/dumb-menu/
+
+https://github.com/cornradio/dumb_menu (i want stars ⭐ uwu)
+
 ## Usage
 
 ```python
@@ -19,13 +26,6 @@ print(f"You selected option {index + 1}: {options[index]}")
 
 ![png](https://raw.githubusercontent.com/cornradio/imgs/main/20230214163952.png)
 
-## Installation
-
-https://pypi.org/project/dumb-menu/
-
-https://github.com/cornradio/dumb_menu (i want stars ⭐ uwu)
-
-
 ## how to upload a new version (for me)
 
 en: https://packaging.python.org/tutorials/packaging-projects/ 
@@ -36,3 +36,15 @@ zh: https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html#id2
 2. testing `python setup.py develop`
 3. `python3 setup.py sdist`
 4. `twine upload dist/*`
+
+## Update log
+
+`1.0.4` support "clean mode"
+
+`1.0.3` show selected index also when using hotkey  
+
+`1.0.2` first useable version
+
+`1.0.1` fix bug
+
+`1.0.0` first release
