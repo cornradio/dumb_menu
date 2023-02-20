@@ -39,7 +39,11 @@ zh: https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html#id2
 
 ## Update log
 
-`1.0.4` support "clean mode"
+`1.0.6` forget write log in 1.0.5
+
+`1.0.5` fix bug in 1.0.4
+
+`1.0.4` support "clean mode" 
 
 `1.0.3` show selected index also when using hotkey  
 

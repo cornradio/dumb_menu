@@ -118,5 +118,3 @@ def demo():
         print(f"You selected option {index + 1}: {options[index]}")
     else:
         print("You exited the menu.")
-
-demo()
