@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = '1.0.6'
+VERSION = '1.0.7'
 DESCRIPTION = 'a ligh weight menu , support both win and mac '
 LONG_DESCRIPTION = 'dumb_menu is a ligh weight menu ,support hot key, support both win and mac'
 

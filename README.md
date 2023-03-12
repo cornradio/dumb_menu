@@ -33,11 +33,26 @@ en: https://packaging.python.org/tutorials/packaging-projects/
 zh: https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html#id2
 
 1. change `setup.py`
-2. testing `python setup.py develop`
+2. testing `python3 setup.py develop`
 3. `python3 setup.py sdist`
 4. `twine upload dist/*`
 
+test code :
+```
+python3
+
+import dumb_menu
+dumb_menu.demo()
+```
+
+## Get help
+
+Get help ➡️ [Github issue](https://github.com/cornradio/dumb_menu/issues)
+
 ## Update log
+
+
+`1.0.7` fix "flickering on mac zsh" 
 
 `1.0.6` forget write log in 1.0.5
 

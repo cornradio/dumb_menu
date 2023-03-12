@@ -29,8 +29,11 @@ def get_menu_choice1(options):
             exit()
 # endregion
 def get_key(): #get keypress using getch , msvcrt = windows or termios = linux
+    flag_have_getch = False
+    flag_have_msvcrt = False
     try :
         import getch
+        flag_have_getch = True
         first_char = getch.getch()
         if first_char == '\x1b': #arrow keys
             a=getch.getch()
@@ -44,8 +47,10 @@ def get_key(): #get keypress using getch , msvcrt = windows or termios = linux
             return first_char #normal keys like abcd 1234
     except :
         pass
+    
     try:
         import msvcrt
+        flag_have_msvcrt = True
         key = msvcrt.getch()  # get keypress
         if key == b'\x1b':  # Esc key to exit
             return 'esc'
@@ -59,6 +64,10 @@ def get_key(): #get keypress using getch , msvcrt = windows or termios = linux
             return key.decode('utf-8')
     except:
         pass
+    
+    if flag_have_getch == False and flag_have_msvcrt == False:
+        print('\nErr:\tcan\'t get input \nFix:\tpip install getch')
+        exit()
 
 
 def get_menu_choice(options,isclean = False):
@@ -118,3 +127,7 @@ def demo():
         print(f"You selected option {index + 1}: {options[index]}")
     else:
         print("You exited the menu.")
+
+#! test code 
+# if __name__ == "__main__":
+#     demo()
