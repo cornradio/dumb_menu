@@ -28,7 +28,7 @@ def get_menu_choice1(options):
             print('error , may not support your system')
             exit()
 # endregion
-def get_key(): #get keypress using getch , msvcrt = windows or termios = linux
+def get_key(): #get keypress using getch, msvcrt = windows
     flag_have_getch = False
     flag_have_msvcrt = False
     try :
@@ -128,6 +128,6 @@ def demo():
     else:
         print("You exited the menu.")
 
-#! test code 
+# # test code 
 # if __name__ == "__main__":
 #     demo()
