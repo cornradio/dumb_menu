@@ -10,8 +10,8 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 
 VERSION = '1.0.7'
-DESCRIPTION = 'a ligh weight menu , support both win and mac '
-LONG_DESCRIPTION = 'dumb_menu is a ligh weight menu ,support hot key, support both win and mac'
+DESCRIPTION = 'A light weight command line menu that supports Windows, MacOS, and Linux'
+LONG_DESCRIPTION = 'A light weight command line menu. Supporting Windows, MacOS, and Linux OS. It has support for hotkeys'
 
 # Setting up
 setup(
@@ -32,5 +32,6 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
+        "Operating System :: Linux :: Linux"
     ]
 )
