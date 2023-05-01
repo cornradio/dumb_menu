@@ -2,18 +2,18 @@
 
 [![Downloads](https://static.pepy.tech/badge/dumb-menu)](https://pepy.tech/project/dumb-menu)
 
-simple_term_menu don't support windows, so i made this.
+simple_term_menu don't support windows, so I made dumb_menu.
 
-this is not as powerful as simple_term_menu , but this is **THE GOOD OLD MEUN** .
+dumb_menu is not as powerful as simple_term_menu , but this a **GOOD OLD MENU** .
 
-dumb_menu is a **ligh weight** menu ,support **hot key**, for both **win** and **mac** .
+dumb_menu is a light weight command line menu that supports **Windows**, **MacOS**, and **Linux**.
 
 
 ## Installation
 
 https://pypi.org/project/dumb-menu/
 
-https://github.com/cornradio/dumb_menu (i want stars ⭐ uwu)
+https://github.com/cornradio/dumb_menu (I want stars ⭐ uwu)
 
 ## Usage
 
