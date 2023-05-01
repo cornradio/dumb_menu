@@ -1,6 +1,7 @@
 import codecs
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
 
 # these things are needed for the README.md show on pypi
 here = os.path.abspath(os.path.dirname(__file__))
@@ -23,8 +24,13 @@ setup(
     long_description_content_type="text/markdown",
     long_description=long_description,
     packages=find_packages(),
-    install_requires=[],
-    keywords=['python', 'menu', 'dumb_menu','windows','mac','linux'],
+    install_requires=[
+        'getch; platform_system=="Unix"',
+        'getch; platform_system=="MacOS"',
+        'msvcrt; platform_system=="Windows"',
+        'getch; platform_system=="Linux"'
+    ],
+    keywords=['python', 'menu', 'dumb_menu', 'windows', 'mac', 'linux'],
     classifiers=[
         "Development Status :: 1 - Planning",
         "Intended Audience :: Developers",
