@@ -27,8 +27,6 @@ setup(
     install_requires=[
         'getch; platform_system=="Unix"',
         'getch; platform_system=="MacOS"',
-        'msvcrt; platform_system=="Windows"',
-        'getch; platform_system=="Linux"'
     ],
     keywords=['python', 'menu', 'dumb_menu', 'windows', 'mac', 'linux'],
     classifiers=[
@@ -38,6 +36,5 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-        "Operating System :: Linux :: Linux"
     ]
 )

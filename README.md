@@ -21,7 +21,7 @@ https://github.com/cornradio/dumb_menu (I want stars ⭐ uwu)
 
 ## Usage
 
-compact example:
+example:
 
 ```python
 import dumb_menu
@@ -65,12 +65,19 @@ if __name__ == "__main__":
 ```
 ![Imgur](https://i.imgur.com/7zjLt8g.png)
 
+
 ## Get help
 
 Get help ➡️ [Github issue](https://github.com/cornradio/dumb_menu/issues)
 
 ## Update log
 
+
+`1.0.8` add "return key string" option , add `demo.py`  As a straightforward example
+
+```python
+dumb_menu.get_menu_choice(options,give_key_str = True)
+```
 
 `1.0.7` fix "flickering on mac zsh" 
 
