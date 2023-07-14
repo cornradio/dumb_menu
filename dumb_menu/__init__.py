@@ -69,8 +69,9 @@ def get_key(): #get keypress using getch, msvcrt = windows
         print('\nErr:\tcan\'t get input \nFix:\tpip install getch')
         exit()
 
-
-def get_menu_choice(options,isclean = False):
+# isclean gives a clean meun without hint text
+# give_key_str gives the key pressed instead of the index
+def get_menu_choice(options,isclean = False,give_key_str = False):
     shortcuts = scan_short_cuts(options)  # scan for shortcuts
     selected_index = 0
     print(shortcuts)
@@ -83,7 +84,11 @@ def get_menu_choice(options,isclean = False):
             selected_index = (selected_index + (1 if key == 'down' else -1) + len(options)) % len(options)
         elif key in shortcuts:  # Shortcut key
             show_menu(options, shortcuts[key],isclean) #show selected option when using shortcut
-            return shortcuts[key]
+            if(give_key_str):
+                return key
+            else:
+                return shortcuts[key]
+
 
 def scan_short_cuts(options):
     shortcuts = {}

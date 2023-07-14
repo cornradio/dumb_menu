@@ -10,9 +10,9 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
 
-VERSION = '1.0.7'
+VERSION = '1.0.8'
 DESCRIPTION = 'A light weight command line menu that supports Windows, MacOS, and Linux'
-LONG_DESCRIPTION = 'A light weight command line menu. Supporting Windows, MacOS, and Linux OS. It has support for hotkeys'
+LONG_DESCRIPTION = 'A light weight command line menu. Supporting Windows, MacOS, and Linux. It has support for hotkeys'
 
 # Setting up
 setup(

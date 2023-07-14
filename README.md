@@ -11,11 +11,17 @@ dumb_menu is a light weight command line menu that supports **Windows**, **MacOS
 
 ## Installation
 
+```
+pip install dumb-menu
+```
+
 https://pypi.org/project/dumb-menu/
 
 https://github.com/cornradio/dumb_menu (I want stars ⭐ uwu)
 
 ## Usage
+
+compact example:
 
 ```python
 import dumb_menu
@@ -24,26 +30,40 @@ index = dumb_menu.get_menu_choice(options)
 print(f"You selected option {index + 1}: {options[index]}")
 ```
 
+
 ![png](https://raw.githubusercontent.com/cornradio/imgs/main/20230214163952.png)
 
-## how to upload a new version (for me)
+another example:
 
-en: https://packaging.python.org/tutorials/packaging-projects/ 
-
-zh: https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html#id2
-
-1. change `setup.py`
-2. testing `python3 setup.py develop`
-3. `python3 setup.py sdist`
-4. `twine upload dist/*`
-
-test code :
-```
-python3
-
+```python
+import os
 import dumb_menu
-dumb_menu.demo()
+
+def loopmenu():
+    options = ["[1]happy",
+            "[2]sad",
+            "[3]give me a cookie",
+            "[q]quit"]
+    index = dumb_menu.get_menu_choice(options,isclean = True)
+    # clear screen, cls for windows, clear for linux
+    os.system('cls') 
+    # Python 3.10+ only,old version could use if-else
+    match index:
+        case 0:
+            print(":)")
+        case 1:
+            print(":(")
+        case 2:
+            print("🍪ヾ(•ω•`)o")
+        case 3:
+            exit()
+    input('Press ENTER to continue...')
+
+if __name__ == "__main__":
+    while True:
+        loopmenu()
 ```
+![Imgur](https://i.imgur.com/7zjLt8g.png)
 
 ## Get help
 
@@ -67,3 +87,24 @@ Get help ➡️ [Github issue](https://github.com/cornradio/dumb_menu/issues)
 `1.0.1` fix bug
 
 `1.0.0` first release
+
+## how to upload a new version (for me)
+
+en: https://packaging.python.org/tutorials/packaging-projects/ 
+
+zh: https://python-packaging-zh.readthedocs.io/zh_CN/latest/minimal.html#id2
+
+> make sure have twine installed first
+
+1. change `setup.py`
+2. testing `python3 setup.py develop`
+3. `python3 setup.py sdist`
+4. `twine upload dist/*`
+
+test code :
+```
+python3
+
+import dumb_menu
+dumb_menu.demo()
+```
